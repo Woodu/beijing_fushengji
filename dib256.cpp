@@ -280,7 +280,7 @@ BOOL CDIBitmap :: Save( CFile * pFile ) {
     pFile->Write(&bmfHdr, sizeof(BITMAPFILEHEADER));
     
     pFile->Write(m_pInfo, sizeof(BITMAPINFO) + (wColors-1)*sizeof(RGBQUAD));
-    pFile->WriteHuge(m_pPixels,
+    pFile->Write(m_pPixels,
 		DWORD((dwPadWidth*(DWORD)m_pInfo->bmiHeader.biBitCount*GetHeight())/8) );
   
 	return TRUE;

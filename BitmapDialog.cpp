@@ -325,7 +325,8 @@ void CBitmapDialog :: MakeWindowRgn ()
 			row_start = 0;
 
 			// Go through all columns
-			for (int x=0; x<width; x++)
+			int x;
+			for (x=0; x<width; x++)
 			{
 				// If this pixel is transparent
 				if (dcImage.GetPixel(x, y) == m_colTrans)

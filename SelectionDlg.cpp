@@ -776,7 +776,8 @@ void CSelectionDlg::MoveListItems(CListCtrl & pFromList, CListCtrl & pToList)
 		// secondly, to see the house.
 		// if no such goods find, add it
 		// else merge it
-		for (int i = 0; i < m_list2.GetItemCount(); i++)
+		int i;
+		for (i = 0; i < m_list2.GetItemCount(); i++)
 		{
 			right_drug=m_list2.GetItemText(i,0);
 			if(right_drug==drug_name)  //find such drug in the right
@@ -834,7 +835,8 @@ void CSelectionDlg::MoveListItems(CListCtrl & pFromList, CListCtrl & pToList)
 		// secondly, to see the left
 		// if no such drug find, add it
 		// else merge it
-		for (int i = 0; i < m_list1.GetItemCount(); i++)
+		int i;
+		for (i = 0; i < m_list1.GetItemCount(); i++)
 		{
 			left_drug=m_list1.GetItemText(i,0);
 			if(left_drug==drug_name)  //find such drug in the right
@@ -1253,7 +1255,8 @@ void CSelectionDlg:: DoRandomStuff(void)
 			  	     return ;
 			  }	
 			  // try to find if user already have the goods to be added
-			  for (int j = 0; j < m_list2.GetItemCount(); j++)
+			  int j;
+			  for (j = 0; j < m_list2.GetItemCount(); j++)
 		      {
   			    if(strcmp(m_list2.GetItemText(j,0),
 			         m_chDrugName[gameMessages [i].drug])==0)

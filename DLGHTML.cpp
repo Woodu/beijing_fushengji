@@ -73,7 +73,8 @@ int CHtmlDialog::DoModal()
 	if (!pmk)
 		return -1;
 	
-	TCHAR* pchOptions = m_strOptions.IsEmpty() ? NULL : m_strOptions.GetBuffer(0);
+	USES_CONVERSION;
+	WCHAR* pchOptions = m_strOptions.IsEmpty() ? NULL : A2W(m_strOptions.GetBuffer(0));
 	
 	
 	//Now show the HTML Dialog
