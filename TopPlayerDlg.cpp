@@ -210,7 +210,8 @@ strcpy (hscores [9].name, "li");
 	{
            fgets(line, MAXSTRLEN, fp);  
 		   //sprintf(name,"%s",line);
-		   for(int j=0;j<strlen(line);j++)
+		   int j;
+		   for(j=0;j<strlen(line);j++)
 		   {
 			   if(line[j]==0x0d){
 				   temp[j]='\0';
